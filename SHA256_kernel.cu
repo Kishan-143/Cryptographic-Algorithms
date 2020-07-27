@@ -24,11 +24,16 @@ string sha256(string line) {
 
 int main() {
     // Time Start
+    string result;
     auto start = chrono::steady_clock::now();
-    cout << "sri\t :"<<sha256("sri") << endl;
+    result=sha256("sri");
     // Time End
     auto end = chrono::steady_clock::now();
+    cout << "sri\t :"<< result << endl;
     cout << "Elapsed time in nanoseconds : "<< chrono::duration_cast<chrono::nanoseconds>(end - start).count()<< " ns" << endl;
     cout << "Elapsed time in microseconds : "<< chrono::duration_cast<chrono::microseconds>(end - start).count()<< " micros" << endl;
     return 0;
 }
+//sri	 :d5e96656c6f455d2b0d8da4930a4c744cd86b4e6d2915de179d1f92f49316a9
+//Elapsed time in nanoseconds : 68980 ns
+//Elapsed time in microseconds : 68 micros
